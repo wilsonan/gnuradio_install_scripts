@@ -1,0 +1,30 @@
+Steps to install Gnuradio and its blocks
+
+1. Login to internet.iitb.ac.in all the time during the installation process
+
+2. Install corkscrew and git from the terminal
+
+sudo apt-get install corkscrew
+sudo apt-get install git
+
+3. The files in this folder must be pasted to the home directory of your pc.
+
+4. Change the permissions of the following files using the chmod command.
+
+sudo chmod 755 gitcloneon gitcloneoff git-proxy.sh build-gnuradio
+
+5. Also write your ldapid and password in the authfile in the following format and save it.
+
+ldapusername:ldappassword
+
+6. Run the gnuradio script using the command:
+
+./build-gnuradio
+
+7. Answer y to all the questions. The installation takes about 2-3hrs. There will be times when the you feel that the installation is not proceeding. Don't worry it is. 'Building gnuradio' takes the most time, you can verify the installation process by checking the size of the gnuradio folder that is downloaded to your home directory. It keeps increasing till it reaches around 2.2Gb. 
+
+8. Even though rtl also gets installed when you first try to use rtl dongles it may show an error. Then use the following command:
+sudo rmmod dvb_usb_rtl28xxu
+
+
+This script is slightly modified from the original gnuradio build script. It is found to work successfully in Ubuntu 14.04. 
